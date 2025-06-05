@@ -13,7 +13,6 @@ namespace SpellCheckerTask
     {
 
         string[] All = File.ReadAllLines("WordsFile.txt");
-
         string first = All[0].ToLower();
         string second = All[1].ToLower();
         string third = All[2].ToLower();
@@ -23,16 +22,11 @@ namespace SpellCheckerTask
         string inputWord = Console.ReadLine().ToLower();
 
         if (inputWord == first || inputWord == second || inputWord == third || inputWord == fourth || inputWord == fifth)
-        {
-            Console.WriteLine("Correct spelling!");
-        }
-        else
-        {
-            Console.WriteLine("Incorrect spelling.");
-        }
+        {Console.WriteLine("Correct!");}
+        else {Console.WriteLine("Incorrect.");}
         
 
-        Console.Write("Please Enter a sentence: ");
+        Console.Write("Enter a sentence.");
         string sentence = Console.ReadLine().ToLower();
         string[] sentenceWords = sentence.Split(' ');
 
