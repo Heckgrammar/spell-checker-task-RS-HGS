@@ -11,8 +11,7 @@ namespace SpellCheckerTask
 {
     static void Main(string[] args)
     {
-        // Read words from file - done up to 5 wors
-        
+
         string[] All = File.ReadAllLines("WordsFile.txt");
 
         string first = All[0].ToLower();
@@ -33,7 +32,6 @@ namespace SpellCheckerTask
         }
         
 
-        // Ask for a sentence
         Console.Write("Please Enter a sentence: ");
         string sentence = Console.ReadLine().ToLower();
         string[] sentenceWords = sentence.Split(' ');
@@ -51,7 +49,6 @@ namespace SpellCheckerTask
             }
         }
 
-        // Display the score thry got for the test
         double score = (double)correctWords / totalWords * 100;
         Console.WriteLine("\nCorrect words: " + correctWords + "/" + totalWords);
         Console.WriteLine("Spelling Score: " + score + "%");
