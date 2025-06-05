@@ -56,5 +56,19 @@ namespace SpellCheckerTask
         Console.WriteLine("\nCorrect words: " + correctWords + "/" + totalWords);
         Console.WriteLine("Spelling Score: " + score + "%");
     }
+        static string[] createDictionary()
+        {
+            using StreamReader words = new("WordsFile.txt");
+            int count = 0;
+            string[] dictionaryData = new string[178636];
+            while (!words.EndOfStream)
+            {
+
+                dictionaryData[count] = words.ReadLine();
+                count++;
+            }
+            words.Close();
+            return dictionaryData;
+        }
 }
 }
